@@ -14,14 +14,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
     <title>DOM</title>
 </head>
 
 <body>
-    <form> <!-- Step 2-->
-        <input type="text" id="btnText" placeholder="type here" class="ml-5" >
+    <div id="colorDiv" class="h-100 text-center m-3">
+        <h3>Hover over me if you dare!</h3>
+        <p id="p1">If you click me I will turn red.</p>
+    </div>
+
+    <form class="d-flex justify-content-center align-items-center"> <!-- Step 2-->
+        <input type="text" id="formText1" placeholder="what you want to say" class="ml-5" >
         <input type="button" id="btnSubmit" class="btn btn-primary m-3" value="What you said...">
     </form>
+
 </body>
 
 </html>
