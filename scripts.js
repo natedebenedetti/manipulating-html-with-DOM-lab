@@ -1,12 +1,11 @@
-document.addEventListener("DOMContentLoaded", function (event) { // waits for html to load before running any javascript
+document.addEventListener("DOMContentLoaded", function () { // waits for html to load before running any javascript
 
     // step 1. Creates button without using HTML adds a label to the button and some styling
+
     let btn1 = document.createElement("button");
     let btnTxt = document.createTextNode("This Will Alert!");
     btn1.appendChild(btnTxt);
-
-    let btnDiv = document.createElement('div'); // added in as a way of containing the buttons for use to manipulate their layout on the page.
-    document.body.appendChild(btnDiv);
+    let btnDiv = document.getElementById('btnDiv'); // appends button to button div created in HTML... created to organize my buttons and give them a more uniform look.
     btnDiv.appendChild(btn1);
     btnDiv.style.display = 'flex';
     btnDiv.style.justifyContent = 'center';
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function (event) { // waits for ht
     let p1 = document.getElementById('p1');
     p1.addEventListener('click', function () {
         p1.style.color = '' + randomColor() + '';
-        p1.innerText = "I didn't necessarily lie, I will turn red.........eventually"
+        p1.innerText = "I didn't necessarily lie, I will turn red.........eventually";
     })
 
     // part of step 4... function to create random color that is used to change color of paragraph text every click.
@@ -54,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function (event) { // waits for ht
     };
 
 
-    // step 5. button, empty div, and event listener created in JS that creates a span with my Name and adds it to the div with every button click. 
+    // step 5. button, empty div, and event listener created in JS that creates a span with my Name and adds it to the div button click. 
     let spanDiv = document.createElement('div');
     spanDiv.style.textAlign = 'center';
     spanDiv.style.color = '' + randomColor() + '';
@@ -79,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function (event) { // waits for ht
     let ul = document.getElementById('ul');
     let li = document.createElement('li');
 
-    
+    console.log(friendsArr);
 
     ulBtn.addEventListener('click', function () {
         
