@@ -70,18 +70,29 @@ document.addEventListener("DOMContentLoaded", function () { // waits for html to
         nameSpan.appendChild(myName);
         nameSpan.style.display = 'block';
         nameSpan.style.color = '' + randomColor() + '';
+        
     });
 
     //step 6. Array created in JS and Linked to button and ul created in HTML.
     let friendsArr = ['Matt', 'Dustin', 'Brooks', 'Jason', 'Alex', 'Jordan', 'Todd', 'John', 'Bob', 'Jack'];
     let ulBtn = document.getElementById('ulBtn');
     let ul = document.getElementById('ul');
-    let li = document.createElement('li');
+    
 
-    console.log(friendsArr);
-
+    function grabFriendName () {
+        for (i = 0; i < friendsArr.length; i++) {
+        return friendsArr[i];
+    }
+};
+    console.log(grabFriendName());
+    
+    
     ulBtn.addEventListener('click', function () {
+        let li = document.createElement('li');
+        li.appendChild(grabFriendName());
+        ul.appendChild(li);
 
+        
     });
 
 
