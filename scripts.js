@@ -56,19 +56,20 @@ document.addEventListener("DOMContentLoaded", function () { // waits for html to
     // step 5. button, empty div, and event listener created in JS that creates a span with my Name and adds it to the div button click. 
     let btn3 = document.createElement('button');
     let btn3Text = document.createTextNode('Add-a-span');
+    let spanDiv = document.createElement('div');
+    spanDiv.style.textAlign = 'center';
 
     btn3.appendChild(btn3Text);
     btnDiv.appendChild(btn3);
+    document.body.appendChild(spanDiv);
 
     btn3.addEventListener('click', function () {
-        let spanDiv = document.createElement('div');
         let nameSpan = document.createElement('span');
         let myName = document.createTextNode('Nate DeBenedetti');
-        document.body.appendChild(spanDiv);
-        nameSpan.appendChild(myName);
         spanDiv.appendChild(nameSpan);
-        spanDiv.style.textAlign = 'center';
-        spanDiv.style.color = '' + randomColor() + '';
+        nameSpan.appendChild(myName);
+
+        nameSpan.style.color = '' + randomColor() + '';
     });
 
     //step 6. Array created in JS and Linked to button and ul created in HTML.
