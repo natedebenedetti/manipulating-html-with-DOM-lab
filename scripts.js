@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () { // waits for html to
         let myName = document.createTextNode('Nate DeBenedetti');
         spanDiv.appendChild(nameSpan);
         nameSpan.appendChild(myName);
-
+        nameSpan.style.display = 'block';
         nameSpan.style.color = '' + randomColor() + '';
     });
 
