@@ -39,9 +39,10 @@ document.addEventListener("DOMContentLoaded", function (event) { // waits for ht
     });
 
     //step 4. Linking to paragragh element created in HTML and changing color on click event.
-    let p = document.getElementById('p1');
+    let p1 = document.getElementById('p1');
     p1.addEventListener('click', function () {
         p1.style.color = '' + randomColor() + '';
+        p1.innerText = "I didn't necessarily lie, I will turn red.........eventually"
     })
 
     // part of step 4... function to create random color that is used to change color of paragraph text every click.
@@ -72,8 +73,18 @@ document.addEventListener("DOMContentLoaded", function (event) { // waits for ht
         nameSpan.style.alignItems = 'center';
     });
 
-    //step 6. Array created in JS and Linked to ul created in HTML.
+    //step 6. Array created in JS and Linked to button and ul created in HTML.
+    let friendsArr = ['Matt', 'Dustin', 'Brooks', 'Jason', 'Alex', 'Jordan', 'Todd', 'John', 'Bob', 'Jack'];
+    let ulBtn = document.getElementById('ulBtn');
+    let ul = document.getElementById('ul');
+    let li = document.createElement('li');
+
     
+
+    ulBtn.addEventListener('click', function () {
+        
+    });
+
 
 
 
