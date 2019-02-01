@@ -83,12 +83,13 @@ document.addEventListener("DOMContentLoaded", function () { // waits for html to
         friendsArr.forEach(function(name) {
             let listItem = document.createElement('li');
             listItem.style.margin = '3em';
+            listItem.style.color = '' + randomColor() + '';
             let friend = document.createTextNode(name);
             let list = document.getElementById('list');
             list.style.display = 'flex';
-            list.style.justifyContent = 'center';
+            list.style.flexWrap = 'wrap';
+            list.style.justifyContent = 'space-evenly';
             listItem.appendChild(friend);
-            listItem.style.color = '' + randomColor() + '';
             list.appendChild(listItem);
         });
     });
